@@ -8,6 +8,7 @@
     "dev": "cds watch"
   },
   "dependencies": {
+    "@sap/cds": "^8",
     "@sap/xssec": "^4",
     "@aws-sdk/client-s3": "^3",
     "@aws-sdk/s3-request-presigner": "^3",
