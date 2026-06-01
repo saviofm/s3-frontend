@@ -1,5 +1,5 @@
 <mvc:View
-  controllerName="com.sap.objectstorefilemanager.controller.Home"
+  controllerName="com.presales.objectstorefilemanager.controller.Home"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
   xmlns:f="sap.f"

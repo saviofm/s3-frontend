@@ -77,11 +77,11 @@ modules:
               TokenServiceInstanceName: object-store-file-manager-xsuaa
               TokenServiceKeyName: object-store-file-manager-xsuaa-key
               URL: ~{srv-api/srv-url}
-              sap.cloud.service: com.sap.objectstorefilemanager
+              sap.cloud.service: com.presales.objectstorefilemanager
             - Name: object-store-file-manager-html5repo
               ServiceInstanceName: object-store-file-manager-html5repo
               ServiceKeyName: object-store-file-manager-html5repo-key
-              sap.cloud.service: com.sap.objectstorefilemanager
+              sap.cloud.service: com.presales.objectstorefilemanager
           existing_destinations_policy: update
     build-parameters:
       no-source: true

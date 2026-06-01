@@ -1,11 +1,11 @@
 {
-  "name": "com.sap.objectstorefilemanager",
+  "name": "com.presales.objectstorefilemanager",
   "version": "1.0.0",
   "description": "SAPUI5 frontend for Object Store File Manager",
   "scripts": {
     "start": "ui5 serve --open index.html",
     "build": "ui5 build --clean-dest",
-    "build:mta": "ui5 build --clean-dest && rm -rf deploy && mkdir deploy && cd dist && zip -r ../deploy/com.sap.objectstorefilemanager.zip .",
+    "build:mta": "ui5 build --clean-dest && rm -rf deploy && mkdir deploy && cd dist && zip -r ../deploy/com.presales.objectstorefilemanager.zip .",
     "lint": "ui5lint"
   },
   "devDependencies": {

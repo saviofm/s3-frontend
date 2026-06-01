@@ -1,6 +1,6 @@
 specVersion: "4.0"
 metadata:
-  name: com.sap.objectstorefilemanager
+  name: com.presales.objectstorefilemanager
 type: application
 framework:
   name: SAPUI5
@@ -27,7 +27,7 @@ builder:
         includeTask: true
   bundles:
     - bundleDefinition:
-        name: "com/sap/objectstorefilemanager/Component-preload.js"
+        name: "com.presales.objectstorefilemanager/Component-preload.js"
         defaultFileTypes:
           - ".js"
           - ".fragment.xml"
@@ -37,7 +37,7 @@ builder:
         sections:
           - mode: preload
             filters:
-              - "com/sap/objectstorefilemanager/"
+              - "com.presales.objectstorefilemanager/"
             resolve: true
             renderer: false
       bundleOptions:

@@ -1,7 +1,7 @@
 {
   "_version": "1.61.0",
   "sap.app": {
-    "id": "com.sap.objectstorefilemanager",
+    "id": "com.presales.objectstorefilemanager",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "title": "{{appTitle}}",
@@ -47,7 +47,7 @@
   },
   "sap.cloud": {
     "public": true,
-    "service": "com.sap.objectstorefilemanager"
+    "service": "com.presales.objectstorefilemanager"
   },
   "sap.platform.hcp": {
     "uri": "webapp"
@@ -55,7 +55,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "rootView": {
-      "viewName": "com.sap.objectstorefilemanager.view.App",
+      "viewName": "com.presales.objectstorefilemanager.view.App",
       "type": "XML",
       "async": true,
       "id": "app"
@@ -78,7 +78,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.sap.objectstorefilemanager.i18n.i18n"
+          "bundleName": "com.presales.objectstorefilemanager.i18n.i18n"
         }
       },
       "files": {
@@ -102,7 +102,7 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "com.sap.objectstorefilemanager.view",
+        "viewPath": "com.presales.objectstorefilemanager.view",
         "controlId": "app",
         "controlAggregation": "pages",
         "async": true

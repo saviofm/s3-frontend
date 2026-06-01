@@ -175,7 +175,7 @@ export default class HomeController extends Controller {
     if (!this._folderDialog) {
       this._folderDialog = (await Fragment.load({
         id:         this.getView()!.getId(),
-        name:       "com.sap.objectstorefilemanager.fragment.CreateFolder",
+        name:       "com.presales.objectstorefilemanager.fragment.CreateFolder",
         controller: this,
       })) as Dialog
       this.getView()!.addDependent(this._folderDialog)
@@ -218,7 +218,7 @@ export default class HomeController extends Controller {
     if (!this._renameDialog) {
       this._renameDialog = (await Fragment.load({
         id:         this.getView()!.getId(),
-        name:       "com.sap.objectstorefilemanager.fragment.Rename",
+        name:       "com.presales.objectstorefilemanager.fragment.Rename",
         controller: this,
       })) as Dialog
       this.getView()!.addDependent(this._renameDialog)
@@ -272,7 +272,7 @@ export default class HomeController extends Controller {
     if (!this._moveDialog) {
       this._moveDialog = (await Fragment.load({
         id:         this.getView()!.getId(),
-        name:       "com.sap.objectstorefilemanager.fragment.Move",
+        name:       "com.presales.objectstorefilemanager.fragment.Move",
         controller: this,
       })) as Dialog
       this.getView()!.addDependent(this._moveDialog)
