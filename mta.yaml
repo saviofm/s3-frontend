@@ -51,8 +51,6 @@ modules:
       build-result: deploy
 
   # ── Destination content ───────────────────────────────────────────────────────
-  # Cria destinations no instance do destination service via MTA content deployer.
-  # Padrão: content.instance (não subaccount) — compatível com SAP Build Work Zone.
   - name: object-store-file-manager-dest-content
     type: com.sap.application.content
     requires:
@@ -124,16 +122,26 @@ resources:
                 Type: HTTP
                 URL: https://ui5.sap.com
             existing_destinations_policy: update
-
-  # ── Object Store (S3-compatible) ──────────────────────────────────────────────
-  # Service key gerado automaticamente pelo MTA deployer.
-  # Campos expostos pelo binding SAP BTP Object Store (s3-standard):
-  #   credentials.access_key_id     — AWS Access Key ID
-  #   credentials.secret_access_key — AWS Secret Access Key
-  #   credentials.bucket            — Nome do bucket
-  #   credentials.host              — Endpoint S3 (ex: s3.amazonaws.com ou regional)
-  #   credentials.region            — Região AWS (ex: eu-central-1)
-  #   credentials.uri               — URI completa s3://<bucket>
+          subaccount:
+            destinations:
+              - Name: sjoule-studio-grounding
+                Description: Object Store S3 grounding for SAP Joule Studio
+                Authentication: OAuth2ClientCredentials
+                clientId: REPLACE_ME_CLIENT_ID
+                clientSecret: REPLACE_ME_CLIENT_SECRET
+                tokenServiceURL: https://s3.amazonaws.com
+                ProxyType: Internet
+                Type: HTTP
+                URL: https://s3.amazonaws.com
+                HTML5.DynamicDestination: true
+                HTML5.Timeout: 300000
+                bucket: REPLACE_ME_BUCKET
+                host: REPLACE_ME_HOST
+                region: us-east-1
+                username: REPLACE_ME_USERNAME
+                type: S3
+                sap-joule-studio-document-grounding-object-store: true
+            existing_destinations_policy: update
   - name: object-store-file-manager-objectstore
     type: org.cloudfoundry.managed-service
     parameters:
