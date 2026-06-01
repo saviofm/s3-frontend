@@ -136,7 +136,7 @@ resources:
                 HTML5.DynamicDestination: true
                 HTML5.Timeout: 300000
                 bucket: REPLACE_ME_BUCKET
-                host: REPLACE_ME_HOST
+                host: s3.amazonaws.com
                 region: us-east-1
                 username: REPLACE_ME_USERNAME
                 type: S3
