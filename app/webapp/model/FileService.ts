@@ -1,6 +1,9 @@
 import type { FileItem, FolderItem, UploadResult } from "./types"
 
-const BASE = "/api"
+// sap.ui.require.toUrl resolves relative to the app's runtime base path,
+// which works both standalone (/) and in Work Zone (/<appId>/).
+const BASE = (sap.ui.require as unknown as { toUrl(s: string): string })
+  .toUrl("com/presales/objectstorefilemanager/api")
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const resp = await fetch(`${BASE}${path}`, {
