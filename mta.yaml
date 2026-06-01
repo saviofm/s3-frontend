@@ -112,6 +112,18 @@ resources:
     parameters:
       service: destination
       service-plan: lite
+      config:
+        HTML5Runtime_enabled: true
+        version: 1.0.0
+        init_data:
+          instance:
+            destinations:
+              - Authentication: NoAuthentication
+                Name: ui5
+                ProxyType: Internet
+                Type: HTTP
+                URL: https://ui5.sap.com
+            existing_destinations_policy: update
 
   # ── Object Store (S3-compatible) ──────────────────────────────────────────────
   # Service key gerado automaticamente pelo MTA deployer.
